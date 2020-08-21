@@ -232,15 +232,10 @@ export interface TinySliderSettings extends CommonOptions {
      */
     swipeAngle?: number | boolean;
     /**
-     * Prevent next transition while slider is transforming. 
+     * Prevent next transition while slider is transforming.
      * @defaultValue false
      */
     preventActionWhenRunning?: boolean
-    /**
-     * Prevent page from scrolling on touchmove. If set to "auto", the slider will first check if the touch direction matches the slider axis, then decide whether prevent the page scrolling or not. If set to "force", the slider will always prevent the page scrolling.
-     * @defaultValue false
-     */
-    preventScrollOnTouch?: "auto" | "force" | false;
     /**
      * Difine the relationship between nested sliders.
      * Make sure you run the inner slider first, otherwise the height of the inner slider container will be wrong.
@@ -253,15 +248,15 @@ export interface TinySliderSettings extends CommonOptions {
      */
     freezable?: boolean;
     /**
-     * Prevent page from scrolling on `touchmove`. If set to "auto", the slider will first check if the touch direction matches the slider axis, then decide 
+     * Prevent page from scrolling on `touchmove`. If set to "auto", the slider will first check if the touch direction matches the slider axis, then decide
      * whether prevent the page scrolling or not. If set to "force", the slider will always prevent the page scrolling.
      * @defaultValue false
      */
     preventScrollOnTouch?: "auto" | "force" | false;
     /**
-    * Nonce attribute for inline style tag to allow slider usage without unsafe-inline CSP Option
-    * @defaultValue false
-    */
+     * Nonce attribute for inline style tag to allow slider usage without unsafe-inline CSP Option
+     * @defaultValue false
+     */
     nonce?: string | false;
     /**
      * Callback to be run on initialization.
@@ -298,7 +293,18 @@ export interface TinySliderInfo {
     visibleNavIndexesCached?: number;
 }
 
-export type SilderEvent = 'indexChanged' | 'transitionStart' | 'transitionEnd' | 'newBreakpointStart' | 'newBreakpointEnd' | 'touchStart' | 'touchMove' | 'touchEnd' | 'dragStart' | 'dragMove' | 'dragEnd';
+export type SilderEvent =
+    'indexChanged'
+    | 'transitionStart'
+    | 'transitionEnd'
+    | 'newBreakpointStart'
+    | 'newBreakpointEnd'
+    | 'touchStart'
+    | 'touchMove'
+    | 'touchEnd'
+    | 'dragStart'
+    | 'dragMove'
+    | 'dragEnd';
 
 export interface TinySliderInstance {
     /**
